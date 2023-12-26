@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 const HomePage = () => {
+  const [showText, setShowText] = useState(false);
   return (
     <>
       <h2>Home Now</h2>
@@ -18,6 +19,19 @@ const HomePage = () => {
       </div>
       <div>
         <input value="Camry 08" />
+      </div>
+      <div>
+        {showText && <span> This is Show Text</span>}
+        <br />
+        <button
+          onClick={() =>
+            setTimeout(() => {
+              setShowText(!showText);
+            }, 1000)
+          }
+        >
+          Show Text
+        </button>
       </div>
     </>
   );
