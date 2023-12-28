@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import HomePage from "../components/HomePage";
+import { UserProfile } from "../components/UserProfile";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,12 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <HomePage />
+        <UserProfile
+          displayName="Tunde Elesho hgfgkhasdgahgasdljha;rfkaerh ulr al"
+          userName="gemtunde"
+          email="gemtunde@gmail.com"
+          isEmailVerified={false}
+        />
       </main>
     </>
   );
